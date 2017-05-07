@@ -1,10 +1,10 @@
 import request from 'superagent';
 
-export default function isJestCool() {
+export default async function isCool(name) {
 	return request
 		.post('https://jest-playback-server.glitch.me')
 		.send({
-			jest: 'isCool'
+			[name]: 'isCool'
 		})
-		.then(response => response.body.jest === 'isCool');
+		.then(response => response.body[name] === 'isCool');
 }
