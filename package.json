@@ -1,9 +1,12 @@
 {
   "devDependencies": {
+    "ava": "^0.19.1",
+    "ava-playback": "^0.0.5",
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.4.0",
     "jest": "^20.0.0",
-    "nock": "^9.0.13"
+    "nock": "^9.0.13",
+    "supertest": "^3.0.0"
   },
   "dependencies": {
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
@@ -17,5 +20,10 @@
   "license": "MIT",
   "scripts": {
     "start": "babel-node index.js"
+  },
+  "ava": {
+    "require": [
+      "ava-playback"
+    ]
   }
 }

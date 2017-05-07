@@ -16,6 +16,14 @@ describe('#isJestCool', () => {
 		const result = await isCool('jest');
 		assert(intercepted === true);
 		expect(getInterceptedRequest()).toMatchSnapshot();
+	test('should return true', async () => {
+		nock('https://jest-playback-server.glitch.me')
+			.post('/', { jest: 'isCool' })
+			.reply(200, { jest: 'isCool' });
+		
+		console.log(expect);
+		
+		const result = await isJestCool();
 		
 		expect(result).toBe(true);
 	});
