@@ -8,3 +8,11 @@ export default function isJestCool() {
 		})
 		.then(response => response.body.jest === 'isCool');
 }
+
+isJestCool().then(answer => {
+	if (answer) {
+		console.log('Jest is cool');
+	} else {
+		console.log('Jest is not cool');
+	}
+});
