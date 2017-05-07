@@ -40,7 +40,6 @@ export const jock = (host, pathname) => {
 	return writeJock;
 };
 
-
 export const writeJock = () => {
 	const testName = expect.getState().currentTestName;
 	const scope = scopes[testName];

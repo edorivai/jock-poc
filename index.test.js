@@ -11,8 +11,12 @@ describe('#isJestCool', () => {
 		console.log('STARTING JEST');
 		// console.log(expect.getState());
 
-		jock('https://jest-playback-server.glitch.me', '/');
+		// Timeout: 100ms
+		const { intercepted, getInterceptedRequest } = await jock('https://jest-playback-server.glitch.me', '/');
 		const result = await isCool('jest');
+		assert(intercepted === true);
+		expect(getInterceptedRequest()).toMatchSnapshot();
+		
 		expect(result).toBe(true);
 	});
 });
