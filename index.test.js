@@ -14,7 +14,6 @@ describe('#isJestCool', () => {
 		// Timeout: 100ms
 		const { intercepted, getInterceptedRequest } = await jock('https://jest-playback-server.glitch.me', '/');
 		const result = await isCool('jest');
-		assert(intercepted === true);
 		expect(getInterceptedRequest()).toMatchSnapshot();
 	test('should return true', async () => {
 		nock('https://jest-playback-server.glitch.me')
