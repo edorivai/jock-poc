@@ -1,7 +1,7 @@
 # Features
 
 ## Capturing
-Checks if we have a recorded req plus res. If not, makes a req. Asks if the req looks okay. If yes, stores the req plus its res, if no, stores nothing, fails your test.
+Checks if we have a recorded req plus res. If not, makes a req and stores the req plus its res.
 
 ## Playback
 If we have a req plus res already, checks if your current req is equal to the stored one. If yes, replies with the stored res. If no, fails your test, diffing the changed req.
