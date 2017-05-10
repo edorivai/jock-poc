@@ -7,7 +7,7 @@ Checks if we have a recorded req plus res. If not, makes a req and stores the re
 If we have a req plus res already, checks if your current req is equal to the stored one. If yes, replies with the stored res. If no, fails your test, diffing the changed req.
 
 ## Update snapshot
-Asking Jock to update its snapshot makes Jock diff the recorded req against the actual req, and asks if the changes are okay. If yes, throw away req plus res and execute capturing. If no, fail test.
+Asking Jock to update its snapshot makes Jock throw away req plus res and execute capturing.
 
 ## Complications
 
